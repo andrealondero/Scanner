@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MediaSample.MediaPage">
+		<Grid>
+			<Grid.RowDefinitions>
+				<RowDefinition Height="0.5*" />
+				<RowDefinition Height="1*" />
+				<RowDefinition Height="0.5*" />
+				<RowDefinition Height="3*" />
+				<RowDefinition Height="0.5*" />
+				<RowDefinition Height="3*" />
+				<RowDefinition Height="1.5*" />
+			</Grid.RowDefinitions>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="*"/>
+			</Grid.ColumnDefinitions>
+
+		<Label Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Text="Codice scannerizzato" TextColor="White" FontSize="Medium" VerticalOptions="Center"/>
+		<Label Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" x:Name="scannedCode" Text="" FontSize="Large" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
+
+		<Label Grid.Row="2" Grid.Column="0" Text="Foto" TextColor="White" FontSize="Medium" VerticalOptions="Center"/>
+		<Image Grid.Row="3" Grid.Column="0" x:Name="image"/>
+		<Image Grid.Row="3" Grid.Column="1" x:Name="imageAdded1"/>
+		<Image Grid.Row="3" Grid.Column="2" x:Name="imageAdded2"/>
+		<Button Grid.Row="3" Grid.Column="2" x:Name="pickPhoto" Text="+" FontSize="Large" BackgroundColor="DarkBlue"/>
+
+		<Label Grid.Row="4" Grid.Column="0" Text="Firma" TextColor="White" FontSize="Medium" VerticalOptions="Center"/>
+		<Image Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="3" x:Name="imageFirma"/>
+
+		<Button Grid.Row="6" Grid.Column="0" x:Name="takeCode" Text="Scan Code"/>
+		<Button Grid.Row="6" Grid.Column="1" x:Name="takePhoto" Text="Take Photo"/>
+		<Button Grid.Row="6" Grid.Column="2" x:Name="takeFirma" Text="Firma"/>
+
+		</Grid>
+</ContentPage>
